@@ -157,8 +157,7 @@
 			$sql="SELECT * FROM products WHERE product_keywords LIKE '%$keyword%'";
 			if(isset($_POST['price_sorted'])){
 			$sql="SELECT * FROM products WHERE product_cat='$cid' and product_keywords LIKE '%$keyword%' ORDER BY product_price";
-		
-		}
+			}
 		
 		$run_query=mysqli_query($conn,$sql);
 		while($row=mysqli_fetch_array($run_query)){
@@ -184,7 +183,8 @@
 				}
 		
 
-	}
+			}
+		}
 
 		if(isset($_POST['addToProduct'])){
 			if(!(isset($_SESSION['uid']))){echo "
@@ -415,9 +415,10 @@
 				</div>
 		";
 	}
+	}
+
 	
-}
-}
+
 
 
 
